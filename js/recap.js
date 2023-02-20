@@ -8,5 +8,12 @@ document.getElementById('bg-change').addEventListener('click', function(){
     }
 })
 document.getElementById('add-child').addEventListener('click', function(){
-    console.log('Add Element is Clicked');
+    const friendsContainer = document.getElementById('friends-container');
+    const friend =document.createElement('div');
+    friend.classList.add('friend');
+    friend.innerHTML = `
+    <h3 class="friend-name">New Friend</h3>
+    <p>New Friend is Added in my list.</p>
+    `
+    friendsContainer.appendChild(friend);
 })
